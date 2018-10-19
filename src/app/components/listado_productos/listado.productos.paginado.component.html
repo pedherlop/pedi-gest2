@@ -1,0 +1,30 @@
+<div class="starter-template">
+  <h2>Listado de Productos Paginado</h2>
+
+  <div *ngIf="pagina">
+
+    <mat-paginator [length]="pagina.numeroTotalElementos" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions"
+      (page)="getServerData($event)">
+    </mat-paginator>
+
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th>Código</th>
+            <th>Nombre</th>
+            <th>Catgoría</th>
+            <th>Precio</th>
+          <th>Fecha de Alta</th>
+        </tr>
+      </thead>
+      <tr *ngFor="let producto of pagina.elementos">
+        <td><a [routerLink]="['/detalles',producto.codigo]">{{producto.codigo}}</a></td>
+        <td>{{producto.nombre}}</td>
+        <td>{{producto.categoria}}</td>
+        <td>{{producto.precio | currency:'EUR'}}</td>
+        <td>{{producto.fechaAlta | date:'dd/MMM/yyyy'}}</td>
+      </tr>
+    </table>
+
+  </div>
+</div>

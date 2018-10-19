@@ -1,0 +1,42 @@
+<div class="starter-template">
+  <h2>Alta de Producto</h2>
+  {{errorMessage}}
+  
+  <div class="form-group">
+    <label for="idCodigo">Código</label>
+    <input id="idCodigo" [(ngModel)] = 'producto.codigo' class="form-control"/>
+  </div>
+    
+  <div class="form-group">
+    <label for="idProducto">Producto</label>
+    <input id="idProducto" [(ngModel)] = 'producto.nombre' class="form-control"/>
+  </div>
+    
+  <div class="form-group">
+    <label for="idPrecio">Precio</label>
+    <input id="idPrecio" [(ngModel)] = 'producto.precio' class="form-control"/>
+  </div>
+    
+  <div class="form-group">
+    <label for="idCategoria">Categoría</label>
+    <select id="idCategoria" [(ngModel)] = 'producto.categoria' class="form-control">
+      <option value="CAFE">Café</option>
+      <option value="COMIDA">Comida</option>
+      <option value="AGUA">Agua</option>
+      <option value="BEBIDA">Bebida</option>
+      <option value="POSTRE">Postre</option>
+    </select>
+  </div>
+    
+  <div class="form-group">
+    <label for="idDescripción">Descripción</label>
+    <textarea id="idDescripción" [(ngModel)] = 'producto.descripcion' rows="4" class="form-control"></textarea>
+  </div>
+    
+  <div class="form-group">
+    <label for="idFechaAlta">Fecha de Alta</label>
+    <input id="idFechaAlta" type='date' [(ngModel)] = 'producto.fechaAlta' placeholder='fecha alta' class="form-control" />
+  </div>
+  
+  <button class="btn btn-primary" (click)='create()'>Alta </button>
+</div>

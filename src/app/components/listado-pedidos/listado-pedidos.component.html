@@ -1,0 +1,23 @@
+<div class="starter-template">
+
+<h2>Listado de Pedidos</h2>
+
+  <table class="table">
+    <thead class="thead-dark">
+    <tr>
+      <th>Código</th>
+      <th>Fecha</th>
+      <th>Hora</th>
+      <th>Camarero</th>
+      <th>Mesa</th>
+    </tr>
+    </thead>
+    <tr *ngFor="let pedido of pedidos">
+      <td>{{pedido.id}}</td>
+      <td>{{pedido.fecha | date:'dd/MMM/yyyy'}}</td>
+      <td>{{pedido.fecha | date:'HH:mm'}}</td>
+      <td>{{pedido.camarero.nombre}}</td>
+      <td>{{pedido.mesa}}</td>
+    </tr>
+  </table>
+</div>

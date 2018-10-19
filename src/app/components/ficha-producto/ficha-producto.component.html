@@ -1,0 +1,13 @@
+<h2>Ficha de Producto</h2>
+
+<div *ngIf="producto">
+
+    <p>{{producto.categoria}}</p>
+    <p>{{producto.codigo}}</p>
+    <p>{{producto.nombre}}</p>
+    <p>{{producto.precio | currency:'EUR'}}</p>
+    <p>{{producto.fechaAlta | date:'dd/MMM/yyyy'}}</p>
+    <p>{{producto.descripcion}}</p>
+    <p>{{producto.descatalogado}}</p>
+    
+</div>
