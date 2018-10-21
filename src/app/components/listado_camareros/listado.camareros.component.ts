@@ -10,7 +10,7 @@ export class ListadoCamarerosComponent implements OnInit {
 
   camareros;
 
-  constructor(private camareroService: CamareroService){}
+  constructor(private camareroService: CamareroService) {}
 
   ngOnInit(): void {
     this.read();

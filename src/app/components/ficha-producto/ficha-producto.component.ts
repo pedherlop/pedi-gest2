@@ -11,7 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class FichaProductoComponent implements OnInit {
 
   codigo: number;
-  producto:Producto = undefined;
+  producto: Producto = undefined;
   private sub: any;
 
   constructor(private productoService: ProductoService,
@@ -33,7 +33,7 @@ export class FichaProductoComponent implements OnInit {
           }
         );
       }
-    )
+    );
   }
 
   /*

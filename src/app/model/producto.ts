@@ -1,6 +1,6 @@
-export class Producto{
-    codigo:number;
-    nombre:string;
+export class Producto {
+    codigo: number;
+    nombre: string;
     descripcion: number;
     fechaAlta: Date;
     categoria: string;

@@ -17,11 +17,11 @@ export class ListadoPedidosComponent implements OnInit {
   }
 
   read() {
-  
+
     this.pedidoService.getAll().subscribe(pedidos => {
       this.pedidos = pedidos;
     });
-  
+
   }
 
 }

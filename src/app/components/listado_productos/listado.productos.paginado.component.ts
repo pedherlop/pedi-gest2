@@ -9,19 +9,19 @@ import { Pagina }                           from 'src/app/model/pagina';
     styleUrls: ['./listado.productos.paginado.component.css']
   })
 export class ListadoProductosPaginadoComponent implements OnInit {
-    
-    pagina:Pagina = undefined;                  // Nuestra página
-    
+
+    pagina: Pagina = undefined;                  // Nuestra página
+
     pageSize = 10;                              // El valor inicial es 10
     pageSizeOptions: number[] = [5, 10, 25];
 
-    constructor(private productoService: ProductoService){}
+    constructor(private productoService: ProductoService) {}
 
     ngOnInit(): void {
         this.getPageFromBackend(0, this.pageSize);
     }
 
-    getServerData(evento:PageEvent) {
+    getServerData(evento: PageEvent) {
         this.pageSize = evento.pageSize;
         this.getPageFromBackend(evento.pageIndex, this.pageSize);
     }
